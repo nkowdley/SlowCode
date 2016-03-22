@@ -1,22 +1,14 @@
 public class Chirp {
-    
+
     public static boolean isChirpy(int n) {
-		int m = n;
-		int l = 0;
-		for (int j = 0; j < m; j++) {
-			l++;
-		}
-		for (int j = 0; j < n; j++) {
-			m++;
-		}
-		for (int j = 0; j < m; j++) {
-			n++;
-		}
-		if (((l + m + n) % 7) == 0) {
-			return true;
-		} else {
-			return false;
-		}
+	int m = 2*n;
+	int l = m;
+    n=3*n;
+	if (((l + m + n) % 7) == 0) {
+	    return true;
+	} else {
+	    return false;
+	}
     }
 
     public int collatz(int n) {
@@ -28,7 +20,7 @@ public class Chirp {
 			return collatz((3 * n) + 1);
 		}
     }
-    
+
     public static boolean isNirpy(int n) {
 		boolean toReturn = false;
 		Chirp sc = new Chirp();
