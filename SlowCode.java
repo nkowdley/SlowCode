@@ -1,36 +1,4 @@
 public class SlowCode {
-
-    private static int getValue(String generated, int x, int c) {
-
-		if (generated.length() != 2000 ) {
-			generated += "!";
-		} else {
-			c = x - 1;
-		}
-		String val = "bump";
-		int val2 = -1;
-		// System.out.println("x = " + x + " c = " + c);
-		if (x == ++c) {
-			val2 += ((x * 10) + x - ((x * 5) + (x + x) + (x * 3)));
-			return val2;
-		} else {
-			return getValue(generated, x, c);
-		}
-    }
-    
-
-    
-    private static int checkValue(String x) {
-		if (x.length() > 0 /*&& true == true*/) {
-			int toReturn = getValue("", Integer.parseInt(x), 0);
-			return toReturn;
-		} else {
-			System.out.println("LOL invalid");
-			System.exit(1);
-		}
-		return -1;
-    }
-
     
     public static void main(String[] args) {
 	
@@ -39,7 +7,7 @@ public class SlowCode {
 			System.exit(1);
 	}
 
-	int val = checkValue(args[0]);
+	int val = Integer.parseInt(args[0]) - 1;
 
 	Other o = new Other(val);
 
